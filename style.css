@@ -1,0 +1,535 @@
+:root {
+  --primary-color: #51606c; /* Deep mocha */
+  --secondary-color: #b8a9c9; /* Muted lavender */
+  --bg: #f3ece7; /* Soft, warm ivory */
+  --light-color: #ffffff; /* Pure white for contrast */
+  --font-color: #2c2c2c; /* Charcoal grey */
+  --font-family: "Poppins", sans-serif;
+  --transition-speed: 300ms;
+}
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: var(--font-color);
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+  transition: all var(--transition-speed) ease;
+}
+
+/* DESKTOP NAV */
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  background-color: var(--primary-color);
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: rgb(189, 185, 185);
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: var(--secondary-color);
+}
+
+.logo {
+  color: white;
+  font-size: 2rem;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+#mobile-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition: all var(--transition-speed) ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all var(--transition-speed) ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+  
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+/* SECTIONS */
+
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.circle-photo {
+  border-radius: 50%;
+  box-shadow: 4px 2px 10px 1px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+}
+
+/* ICONS */
+
+.arrow-container {
+  position: fixed;
+  right: 10px; /* Adjust the value as needed */
+  bottom: 20px; /* Adjust the value as needed */
+  z-index: 1000; /* Ensure the arrow is above other elements */
+}
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* BUTTONS */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+  transition: all var(--transition-speed) ease;
+}
+
+.btn-color-1
+.btn-color-2 {
+  border: var(--primary-color) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+}
+
+/* .btn-color-1 {
+  background: none;
+} */
+
+.btn-color-2 {
+  background: white;
+}
+
+.btn-color-2:hover {
+  border: white 0.1rem solid;
+}
+
+/* ABOUT SECTION */
+
+#about {
+  position: relative;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+.about-pic {
+  box-shadow: 4px 2px 10px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 2rem;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.details-container {
+  box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: var(--primary-color) 0.1rem solid;
+  border-color: var(--secondary-color);
+  text-align: center;
+}
+
+.timeline {
+  margin-top: 1rem;
+  align-items: center;
+  position: relative;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--secondary-color);
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  left: -0.4rem;
+  width: 1rem;
+  border-radius: 50%;
+  background: var(--primary-color);
+  border: var(--secondary-color) 2px solid;
+}
+
+.timeline-content {
+  margin-left: 1.5rem;
+  text-align: center;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+.text-container {
+  background: white;
+  box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: 2rem;
+  border: var(--primary-color) 0.1rem solid;
+  border-color: var(--secondary-color);
+  text-align: justify;
+  font-family: var(--font-family);
+}
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+.section__pic-container {
+  height: 400px;
+  width: 450px;
+  margin: auto 0;
+}
+
+
+/* EXPERIENCE SECTION */
+
+#experience {
+  position: relative;
+  margin-bottom: 20rem;
+}
+
+.experience-sub-title {
+  color: var(--font-color);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+article .icon {
+  cursor: default;
+}
+
+/* PROJECTS SECTION */
+
+#projects {
+  position: relative;
+  margin-top: 70rem;
+  margin-bottom: 30rem;
+}
+
+.color-container {
+  border-color: var(--secondary-color);
+  background: var(--light-color);
+}
+
+.project-img {
+  border-radius: 2rem;
+  object-fit: fill;
+  width: 90%;
+  height: 90%;
+
+}
+
+.project-title {
+  margin: 1rem;
+  color: black;
+}
+
+.project-btn {
+  color: black;
+  border-color: var(--secondary-color);
+}
+
+/* CONTACT */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Adjust spacing between containers */
+  margin: 2rem auto;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  border: var(--primary-color) 0.1rem solid; /* Apply border to each container */
+  border-radius: 2rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 3rem;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  background-color: var(--primary-color);
+  
+  text-align: center;
+}
+
+footer p {
+  color: white;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  text-align: center;
+}
+
+.space {
+  height: 2rem;
+}
+
+.section__text__p1_contact,.section__text_title{
+  margin-top: 1rem;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+.section__text_title{
+  margin-top: 1rem;
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+}
+
