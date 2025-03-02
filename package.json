@@ -3,15 +3,16 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://j0jing.github.io",
+  
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b main -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
-  "homepage": "https://j0jing.github.io",
   "dependencies": {
     "20": "^3.1.9",
     "@tailwindcss/vite": "^4.0.6",
