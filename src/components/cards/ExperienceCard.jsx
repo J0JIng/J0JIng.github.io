@@ -84,7 +84,7 @@ const ExperienceCard = ({Experiences}) => {
                       &nbsp;&nbsp;|&nbsp;&nbsp;
                       <a
                         className="flex flex-row justify-center items-center gap-1 hover:text-orange-300"
-                        href="/assets/Testimonial_jingo.pdf"
+                        href="../assets/Testimonial_jingo.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
