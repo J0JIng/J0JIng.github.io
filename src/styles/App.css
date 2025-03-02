@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+
+@theme {
+    --color-colour-background: #2b2d31;
+    --color-colour-highlight-word: #151515; 
+    --color-colour-words: #cbd5e1;
+    --color-colour-card: #151515;  
+     
+  }
