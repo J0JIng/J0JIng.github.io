@@ -1,3 +1,4 @@
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
@@ -48,5 +49,15 @@ npm run deploy
 ```
 
 Note that GitHub Pages site is currently being built from the gh-pages branch. 
+</details>
+
+<details>
+<summary>Details</summary>
+<br>
+
+This website portfolio was created to showcase my current projects, skills, and experiences. It is built using React and Tailwind CSS to ensure a responsive and visually appealing design. 
+
+All logic and code were implemented by me, with special thanks to [xJQx](https://github.com/xJQx) for providing the design inspiration
+ 
 </details>
 
