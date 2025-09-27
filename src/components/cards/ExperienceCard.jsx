@@ -79,12 +79,26 @@ const ExperienceCard = ({Experiences}) => {
                       </>
                     )}
                   </span>
-                  {experience.testimonials.length > 0 && (
+                  {experience.testimonials.length > 0 && experience.company == "Micron Technology" && (
                     <>
                       &nbsp;&nbsp;|&nbsp;&nbsp;
                       <a
                         className="flex flex-row justify-center items-center gap-1 hover:text-orange-300"
-                        href="/assets/Testimonial_jingo.pdf"
+                        href="/assets/micron_testimonial_jingo.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <BookMarkIcon />
+                        Testimonial
+                      </a>
+                    </>
+                  )}
+                  {experience.testimonials.length > 0 && experience.company == "SAP" && (
+                    <>
+                      &nbsp;&nbsp;|&nbsp;&nbsp;
+                      <a
+                        className="flex flex-row justify-center items-center gap-1 hover:text-amber-400"
+                        href="/assets/sap_testimonial_jingo.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
